@@ -10,11 +10,17 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next",
+    "@georgedoescode/generative-utils": "^1.0.37",
+    "@sveltejs/adapter-auto": "^1.0.0-next.17",
+    "@sveltejs/kit": "^1.0.0-next.266",
+    "@svgdotjs/svg.js": "^3.1.2",
+    "d3-interpolate": "^3.0.1",
+    "nice-color-palettes": "^3.0.0",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
-    "svelte": "^3.44.0"
+    "random-words": "^1.1.2",
+    "svelte": "^3.44.0",
+    "tinycolor2": "^1.4.2"
   },
   "type": "module"
 }
