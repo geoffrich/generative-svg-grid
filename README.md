@@ -1,20 +1,8 @@
-# create-svelte
+# Generative SVG Grid
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Beautiful, colorful, randomly generated SVG grids powered by SvelteKit!
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
+This implementation is based on the vanilla JS version from [Frontend Horse](https://frontend.horse/articles/generative-grids/).
 
 ## Developing
 
