@@ -1,4 +1,5 @@
 <script>
+	import { random } from '$lib/deps';
 	export let size;
 	export let foreground;
 	export let background;
@@ -12,7 +13,7 @@
 	let startX = centerX - width / 2;
 	let startY = centerY - height / 2;
 
-	let shouldRotate = Math.random() < 0.4;
+	let shouldRotate = random(0, 1) < 0.4;
 </script>
 
 <g class="draw-cross">

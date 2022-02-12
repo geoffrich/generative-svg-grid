@@ -2,24 +2,20 @@
 	// based on https://frontend.horse/articles/generative-grids/
 	import '../app.css';
 	import Grid from '$lib/Grid.svelte';
-	import {
-		random,
-		colors,
-		interpolateLab as interpolate,
-		randomWords,
-		seedPRNG as seed
-	} from '$lib/deps';
+	import { random, colors, interpolateLab as interpolate, randomWords, seedPRNG } from '$lib/deps';
 	import { getBackgroundColors } from '$lib/colors';
 	import { tweened } from 'svelte/motion';
+
+	export let seed;
+
 	let counter = 0;
 
 	let colorPalette = [];
 
-	let bgInner = tweened('#fff', { duration: 500, interpolate });
-	let bgOuter = tweened('#fff', { duration: 500, interpolate });
+	let bgInner = tweened(undefined, { duration: 500, interpolate });
+	let bgOuter = tweened(undefined, { duration: 500, interpolate });
 
-	let seedWord = randomWords();
-	seed(seedWord);
+	seedPRNG(seed);
 
 	regenerate();
 
@@ -29,7 +25,7 @@
 	}
 
 	function newSeed() {
-		seedWord = randomWords();
+		seed = randomWords();
 	}
 
 	function newPalette() {
@@ -40,7 +36,7 @@
 	}
 
 	function setSeed() {
-		seed(seedWord);
+		seedPRNG(seed);
 		regenerate();
 	}
 </script>
@@ -55,7 +51,7 @@
 			</div>
 			<form class="seed" on:submit|preventDefault={setSeed}>
 				<label for="seed">Random seed</label>
-				<input id="seed" type="text" bind:value={seedWord} />
+				<input id="seed" type="text" bind:value={seed} />
 				<button type="button" on:click={newSeed}> New seed </button>
 				<button> Go </button>
 			</form>

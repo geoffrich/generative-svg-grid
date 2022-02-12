@@ -19,7 +19,7 @@
 <Mask {size} {x} {y} let:mask>
 	<g {mask}>
 		<circle r={size} cx={x + xOffset} cy={y + yOffset} fill={foreground} />
-		{#if Math.random() < 0.6}
+		{#if random(0, 1) < 0.6}
 			<circle r={size / 2} cx={x + xOffset} cy={y + yOffset} fill={background} />
 		{/if}
 	</g>
