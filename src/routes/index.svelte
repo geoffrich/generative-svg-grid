@@ -9,6 +9,8 @@
 
 	export let seed;
 
+	export const router = false;
+
 	let counter = 0;
 
 	let colorPalette = [];
