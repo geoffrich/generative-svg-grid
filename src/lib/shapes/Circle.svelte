@@ -9,4 +9,7 @@
 <g class="draw-circle">
 	<rect width={size} height={size} fill={background} {x} {y} />
 	<circle r={size / 2} cx={x + size / 2} cy={y + size / 2} fill={foreground} />
+	{#if Math.random() < 0.3}
+		<circle r={size / 4} cx={x + size / 2} cy={y + size / 2} fill={background} />
+	{/if}
 </g>
