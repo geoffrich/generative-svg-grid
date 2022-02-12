@@ -1,3 +1,7 @@
+<script context="module">
+	export const router = false;
+</script>
+
 <script>
 	import '../app.css';
 	import Grid from '$lib/Grid.svelte';
@@ -8,8 +12,6 @@
 	import { tweened } from 'svelte/motion';
 
 	export let seed;
-
-	export const router = false;
 
 	let counter = 0;
 
