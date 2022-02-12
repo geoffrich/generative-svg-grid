@@ -27,6 +27,10 @@
 		newPalette();
 	}
 
+	function shuffle() {
+		counter++;
+	}
+
 	function newSeed() {
 		seed = randomWords();
 	}
@@ -106,6 +110,8 @@
 		</svg>
 		<span>Regenerate</span>
 	</button>
+
+	<button class="shuffle" on:click={shuffle}> Shuffle </button>
 </div>
 
 <Dialog bind:this={dialog}>
@@ -154,27 +160,30 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		justify-content: space-between;
 	}
 
-	.footer button {
+	button {
 		padding: 0.5rem;
 		margin: 0;
 		background: #ffffffcc;
 		border: 0.5px solid #555555cc;
 		line-height: 1;
 		cursor: pointer;
+		color: #333;
+	}
+
+	.footer button {
+		font-weight: 600;
+		font-size: 0.8rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: 0.25rem;
-		font-weight: 600;
-		color: #333;
-		font-size: 0.75rem;
 	}
 
 	.regenerate-button {
 		border-top-left-radius: 12px;
+		margin-left: auto;
 	}
 
 	.info-button {
