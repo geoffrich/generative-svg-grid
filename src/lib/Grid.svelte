@@ -4,6 +4,7 @@
 	import { getTwoColors } from './colors';
 	import { scale } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
+	import reducedMotion from '$lib/reducedMotion';
 
 	export let colorPalette;
 
@@ -32,8 +33,14 @@
 	width="100%"
 	height="100%"
 	viewBox="0 0 {numRows * squareSize} {numCols * squareSize}"
-	out:scale={{ start: 0.8, opacity: 0, duration: 250 }}
-	in:scale={{ start: 0.8, opacity: 0, duration: 400, delay: 250, easing: backOut }}
+	out:scale={{ start: $reducedMotion ? 1 : 0.8, opacity: 0, duration: 250 }}
+	in:scale={{
+		start: $reducedMotion ? 1 : 0.8,
+		opacity: 0,
+		duration: 400,
+		delay: 250,
+		easing: backOut
+	}}
 >
 	{#each { length: numRows } as _, i}
 		{#each { length: numCols } as _, j}
