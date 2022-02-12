@@ -6,6 +6,7 @@ import QuarterCircle from './QuarterCircle.svelte';
 import DiagonalSquare from './DiagonalSquare.svelte';
 import LetterBlock from './LetterBlock.svelte';
 import HalfSquare from './HalfSquare.svelte';
+import Mask from './Mask.svelte';
 
 export const shapes = [
 	Circle,
@@ -27,3 +28,5 @@ export const bigShapes = [
 	LetterBlock,
 	HalfSquare
 ];
+
+export { Mask };

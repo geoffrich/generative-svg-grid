@@ -4,7 +4,6 @@ specifiers:
   '@georgedoescode/generative-utils': ^1.0.37
   '@sveltejs/adapter-auto': ^1.0.0-next.17
   '@sveltejs/kit': ^1.0.0-next.266
-  '@svgdotjs/svg.js': ^3.1.2
   d3-interpolate: ^3.0.1
   nice-color-palettes: ^3.0.0
   prettier: ^2.4.1
@@ -17,7 +16,6 @@ devDependencies:
   '@georgedoescode/generative-utils': 1.0.37
   '@sveltejs/adapter-auto': 1.0.0-next.17
   '@sveltejs/kit': 1.0.0-next.266_svelte@3.46.4
-  '@svgdotjs/svg.js': 3.1.2
   d3-interpolate: 3.0.1
   nice-color-palettes: 3.0.0
   prettier: 2.5.1
@@ -124,10 +122,6 @@ packages:
       vite: 2.8.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@svgdotjs/svg.js/3.1.2:
-    resolution: {integrity: sha512-0ZCWTiuRjCXT2SUoVDiu+8DLuRQlkxZbO680Y2QkV7jNsULzJajrx6A3MxA/IBQg6UGV5csgPZ8w7U57hZSK+A==}
     dev: true
 
   /@szmarczak/http-timer/1.1.2:

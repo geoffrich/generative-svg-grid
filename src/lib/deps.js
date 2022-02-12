@@ -1,4 +1,3 @@
-export { SVG } from '@svgdotjs/svg.js';
 import { seedPRNG } from '@georgedoescode/generative-utils';
 import randomWords from 'random-words';
 

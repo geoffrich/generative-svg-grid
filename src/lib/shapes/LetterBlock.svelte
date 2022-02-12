@@ -1,5 +1,5 @@
 <script>
-	import { SVG, random } from '$lib/deps';
+	import { random } from '$lib/deps';
 
 	export let size;
 	export let foreground;
@@ -38,24 +38,18 @@
 	];
 	const char = random(selectedCharacters);
 
-	function mask(node) {
-		const mask = SVG().rect(size, size).fill('#fff').move(x, y);
-		SVG(node).maskWith(mask);
-	}
-
-	function transformText(node) {
-		SVG(node)
-			.center(x + size / 2, y + size / 2)
-			.rotate(random([0, 90, 180, 270]));
-	}
+	let fontSize = size * 1.2;
+	let rotation = random([0, 90, 180, 270]);
 </script>
 
-<g class="letter-block" use:mask>
+<g class="letter-block">
 	<rect height={size} width={size} fill={background} {x} {y} />
 	<text
-		use:transformText
+		x={x + size / 2}
+		y={y + size / 2 + fontSize / 3}
+		transform="rotate({rotation}, {x + size / 2}, {y + size / 2})"
 		font-family="Source Code Pro"
-		font-size={size * 1.2}
+		font-size={fontSize}
 		font-weight="800"
 		text-anchor="middle"
 		fill={foreground}>{char}</text
