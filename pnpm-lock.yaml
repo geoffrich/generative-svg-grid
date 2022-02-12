@@ -4,6 +4,7 @@ specifiers:
   '@georgedoescode/generative-utils': ^1.0.37
   '@sveltejs/adapter-auto': ^1.0.0-next.17
   '@sveltejs/kit': ^1.0.0-next.266
+  a11y-dialog: ^7.3.0
   d3-interpolate: ^3.0.1
   nice-color-palettes: ^3.0.0
   prettier: ^2.4.1
@@ -16,6 +17,7 @@ devDependencies:
   '@georgedoescode/generative-utils': 1.0.37
   '@sveltejs/adapter-auto': 1.0.0-next.17
   '@sveltejs/kit': 1.0.0-next.266_svelte@3.46.4
+  a11y-dialog: 7.3.0
   d3-interpolate: 3.0.1
   nice-color-palettes: 3.0.0
   prettier: 2.5.1
@@ -133,6 +135,12 @@ packages:
 
   /@timohausmann/quadtree-js/1.2.5:
     resolution: {integrity: sha512-WcH3pouYtpyLjTCRvNP0WuSV4m7mRyYhLzW44egveFryT7pJhpDsdIJASEe37iCFNA0vmEpqTYGoG0siyXEthA==}
+    dev: true
+
+  /a11y-dialog/7.3.0:
+    resolution: {integrity: sha512-xrpSBbOOtGHT+gXcTk9uXfvfFx1xd3LebBhjpjd5xedzeM2FPqNeT6BvLjB+ej8oEH2fCpDHKn5JIlmiNyV5bA==}
+    dependencies:
+      focusable-selectors: 0.3.1
     dev: true
 
   /cacheable-request/6.1.0:
@@ -806,6 +814,10 @@ packages:
 
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
+    dev: true
+
+  /focusable-selectors/0.3.1:
+    resolution: {integrity: sha512-5JLtr0e1YJIfmnVlpLiG+av07dd0Xkf/KfswsXcei5KmLfdwOysTQsjF058ynXniujb1fvev7nql1x+CkC5ikw==}
     dev: true
 
   /fsevents/2.3.2:
