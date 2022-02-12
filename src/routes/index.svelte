@@ -2,6 +2,7 @@
 	import '../app.css';
 	import Grid from '$lib/Grid.svelte';
 	import Dialog from '$lib/Dialog.svelte';
+	import Meta from '$lib/Meta.svelte';
 	import { random, colors, interpolateLab as interpolate, randomWords, seedPRNG } from '$lib/deps';
 	import { getBackgroundColors } from '$lib/colors';
 	import { tweened } from 'svelte/motion';
@@ -43,9 +44,10 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Beautiful Generative SVG Grids</title>
-</svelte:head>
+<Meta
+	title="Beautiful Generative SVG Grids"
+	image="https://generative-svg-grid.vercel.app/social.png"
+/>
 
 <div class="container" style:--bg-inner={$bgInner} style:--bg-outer={$bgOuter}>
 	<div class="grid">
